@@ -1,6 +1,8 @@
 // A Parametric Eurorack Panel
 // All units in mm 
 
+// v0.0.1 
+
 // Arc resolution parameters
 $fa = 1;
 $fs = 0.4;
@@ -13,23 +15,52 @@ RU = 128.5;
 
 pannel_depth = 2.0;
 
+pannel_width = 10 * HP; 
+
 difference()
 {
-    cube([(8 * HP), pannel_depth ,RU]);
+    cube([pannel_width, pannel_depth ,RU]);
 
+    // Bottom left screw
     rotate([90,0,0])
     translate([7.5, 3.0, -2.1])
     {
         
         cylinder(3, 1.6, 1.6);
     }
-
+    
+    // Bottom right screw
+    rotate([90,0,0])
+    translate([(pannel_width - 7.5), 3.0, -2.1])
+    {
+        
+        cylinder(3, 1.6, 1.6);
+    }
+    
+    // Top left screw
+    rotate([90,0,0])
+    translate([7.5, (RU - 3.0), -2.1])
+    {
+        
+        cylinder(3, 1.6, 1.6);
+    }
+    
+    // Top right screw
+    rotate([90,0,0])
+    translate([(pannel_width - 7.5), (RU - 3.0), -2.1])
+    {
+        
+        cylinder(3, 1.6, 1.6);
+    }
+    
+    
+    // Jack Cutouts 
     for(i = [0:2])
     {
         for(j = [0:1])
         {
             rotate([90,0,0])
-            translate([(10 + (i*10)),(15 + (j*10)), -2.1])
+            translate([(10 + (i*14.5)),(20 + (j*10)), -2.1])
             {
                 
                 cylinder(3, 3.0, 3.0);
