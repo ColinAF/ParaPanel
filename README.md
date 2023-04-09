@@ -5,8 +5,7 @@ ParaPanel is an OpenSCAD, open source template for 3D printed or CNCed Eurorack 
 * Make The pannel into a module
 * Add bounds checking on HP scaling
 * Ensure mounting screws are in scale as the HP is changed
-* Add version number to the model
-* Add the date to the model (automate?)
+* Automate addition of version number and date
 * Add a hexagonal grid pattern to the back of the panel
 * Make the pannel holes into their own module 
 

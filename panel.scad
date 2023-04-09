@@ -17,6 +17,21 @@ pannel_depth = 2.0;
 
 pannel_width = 10 * HP; 
 
+
+// This text is just a test! 
+rotate([90,0,0])
+linear_extrude(1)
+translate([15, 10.0, 0])
+{
+    text("ParaPanel: v0.0.1", 2);
+    
+    translate([-4, -3, 0])
+    text("Designed by: Colin Frisch ", 2);
+    
+    translate([5, -6, 0])
+    text("04/09/23", 2);
+}
+
 difference()
 {
     cube([pannel_width, pannel_depth ,RU]);
