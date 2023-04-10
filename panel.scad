@@ -75,7 +75,7 @@ difference()
         for(j = [0:1])
         {
             rotate([90,0,0])
-            translate([(10 + (i*14.5)),(20 + (j*10)), -2.1])
+            translate([(10 + (i*14.5)),(20 + (j*15)), -2.1])
             {
                 
                 cylinder(3, 3.0, 3.0);
