@@ -1,7 +1,7 @@
 // A Parametric Eurorack Panel
 // All units in mm 
 
-// v0.0.1 
+// v0.0.2 
 
 // Arc resolution parameters
 $fa = 1;
@@ -13,7 +13,7 @@ HP = 5.00;
 // 3U rack unit rounded down ~4mm to account for rim of the mounting rails
 RU = 128.5;
 
-pannel_depth = 2.0;
+pannel_depth = 3.0;
 
 pannel_width = 10 * HP; 
 
@@ -38,34 +38,34 @@ difference()
 
     // Bottom left screw
     rotate([90,0,0])
-    translate([7.5, 3.0, -2.1])
+    translate([7.5, 3.0, -3.1])
     {
         
-        cylinder(3, 1.6, 1.6);
+        cylinder(4, 1.6, 1.6);
     }
     
     // Bottom right screw
     rotate([90,0,0])
-    translate([(pannel_width - 7.5), 3.0, -2.1])
+    translate([(pannel_width - 7.5), 3.0, -3.1])
     {
         
-        cylinder(3, 1.6, 1.6);
+        cylinder(4, 1.6, 1.6);
     }
     
     // Top left screw
     rotate([90,0,0])
-    translate([7.5, (RU - 3.0), -2.1])
+    translate([7.5, (RU - 3.0), -3.1])
     {
         
-        cylinder(3, 1.6, 1.6);
+        cylinder(4, 1.6, 1.6);
     }
     
     // Top right screw
     rotate([90,0,0])
-    translate([(pannel_width - 7.5), (RU - 3.0), -2.1])
+    translate([(pannel_width - 7.5), (RU - 3.0), -3.1])
     {
         
-        cylinder(3, 1.6, 1.6);
+        cylinder(4, 1.6, 1.6);
     }
     
     
@@ -75,10 +75,10 @@ difference()
         for(j = [0:1])
         {
             rotate([90,0,0])
-            translate([(10 + (i*14.5)),(20 + (j*15)), -2.1])
+            translate([(10 + (i*14.5)),(20 + (j*15)), -3.1])
             {
                 
-                cylinder(3, 3.0, 3.0);
+                cylinder(4, 3.1, 3.1);
                 
             }
             
