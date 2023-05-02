@@ -13,7 +13,7 @@ HP = 5.00;
 // 3U rack unit rounded down ~4mm to account for rim of the mounting rails
 RU = 128.5;
 
-pannel_depth = 3.0;
+pannel_depth = 2.3;
 
 pannel_width = 10 * HP; 
 
